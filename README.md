@@ -1,7 +1,7 @@
 # WDD 331R Practice Site
 **Student:** Kameron Meeker
 **Semester:** Spring 2026
-**Live Site:** [View Site](https://kameronmeeker.github.io/WDD331R-AdvancedCSS-PracticeCite/)
+**Live Site:** [View Site](https://mee20004.github.io/WDD331R-AdvancedCSS-PracticeCite/)
 
 ## About
 This repository is my Practice Site for WDD 331R: Advanced CSS.
