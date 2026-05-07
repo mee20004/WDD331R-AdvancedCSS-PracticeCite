@@ -1,0 +1,7 @@
+:root {
+    --space-small: 0.5rem;
+    --space-medium: 1rem;
+    --space-large: 2rem;
+    --font-family-base: 'Inter', 'Segoe UI', Arial, sans-serif;
+    --radius-base: 0.5rem;
+}

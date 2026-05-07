@@ -12,4 +12,5 @@ every push to main.
 ## Pages
 
 - [Home](index.html)
-- [Custom Properties and Nesting](unit-1/custom-properties/index.html)
+- [Unit 1: Custom Properties and Nesting](unit-1/custom-properties/index.html)
+- [Unit 2: Design Tokens & Components](unit-2/index.html)

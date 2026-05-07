@@ -1,0 +1,37 @@
+body {
+   background: var(--color-background);
+   color: var(--color-text);
+   font-family: var(--font-family-base);
+   margin: 0;
+   padding: 0;
+   line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   color: var(--color-primary);
+   font-family: var(--font-family-base);
+   margin-top: 0;
+   margin-bottom: var(--space-medium);
+   line-height: 1.2;
+}
+
+a {
+   color: var(--color-accent);
+   text-decoration: underline;
+   transition: color 0.2s;
+  
+   &:hover, &:focus {
+      color: var(--color-primary);
+      text-decoration: none;
+   }
+}
+
+ul, ol {
+   padding-left: var(--space-large);
+   margin-top: 0;
+   margin-bottom: var(--space-medium);
+}
+
+li {
+   margin-bottom: var(--space-small);
+}
