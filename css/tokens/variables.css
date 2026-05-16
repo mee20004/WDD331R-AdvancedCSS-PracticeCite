@@ -1,0 +1,18 @@
+:root {
+	--space-sm: 0.5rem;
+	--space-md: 1rem;
+	--space-lg: 2rem;
+	--space-small: 0.5rem;
+	--space-medium: 1rem;
+	--space-large: 2rem;
+	--font-body: system-ui, -apple-system, sans-serif;
+	--font-family-base: 'Inter', 'Segoe UI', Arial, sans-serif;
+	--font-size-base: clamp(1rem, 0.95rem + 0.5vw, 1.15rem);
+	--font-size-h1: clamp(2rem, 1.5rem + 3vw, 2.8rem);
+	--radius: 0.75rem;
+	--radius-base: 0.5rem;
+	--shadow: 0 2px 8px 0 rgba(0, 110, 182, 0.08);
+	--shadow-solid: 0 8px 0 0 #2226;
+	--gap-cards: calc(var(--space-md) * 2);
+}
+

@@ -1,0 +1,20 @@
+{
+  "name": "wdd331r-advancedcss-practicecite",
+  "version": "1.0.0",
+  "description": "**Student:** Kameron Meeker **Semester:** Spring 2026 **Live Site:** [View Site](https://mee20004.github.io/WDD331R-AdvancedCSS-PracticeCite/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss css/main.css -o dist/styles.css",
+    "watch": "postcss css/main.css -o dist/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^7.1.9",
+    "postcss": "^8.5.14",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.1"
+  }
+}

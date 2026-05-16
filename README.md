@@ -14,3 +14,23 @@ every push to main.
 - [Home](index.html)
 - [Unit 1: Custom Properties and Nesting](unit-1/custom-properties/index.html)
 - [Unit 2: Design Tokens & Components](unit-2/index.html)
+
+
+## Folder Structure
+```
+css/
+  base/
+  components/
+  layout/
+  tokens/
+  utilities/
+  main.css
+dist/
+```
+
+## Build Tool
+PostCSS
+
+## How to Build
+1. `npm install`
+2. `npm run build:css`
