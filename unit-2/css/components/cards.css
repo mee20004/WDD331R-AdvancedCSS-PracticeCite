@@ -10,9 +10,9 @@
 }
 
 .card {
-   background: #fff;
+   background: var(--color-surface);
    border-radius: var(--radius-base);
-   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+   box-shadow: 0 2px 8px var(--color-shadow);
    padding: clamp(var(--space-medium), 5vw, var(--space-large));
    display: flex;
    flex-direction: column;

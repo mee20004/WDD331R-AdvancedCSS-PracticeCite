@@ -1,7 +1,33 @@
 :root {
-    --space-small: 0.5rem;
-    --space-medium: 1rem;
-    --space-large: 2rem;
-    --font-family-base: 'Inter', 'Segoe UI', Arial, sans-serif;
-    --radius-base: 0.5rem;
+    --font-family-sans: system-ui, sans-serif;
+    --font-family-mono: monospace;
+    --font-size-sm: 1.4rem;
+    --font-size-md: 1.6rem;
+    --font-size-lg: 1.8rem;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --transition-base: 0.2s ease;
+    --icon-size-sm: 24px;
+    --icon-size-md: 32px;
+    --outline-width: 2px;
+
+    --space-xs: var(--spacing-xs);
+    --space-sm: var(--spacing-sm);
+    --space-md: var(--spacing-md);
+    --space-lg: var(--spacing-lg);
+    --space-xl: var(--spacing-xl);
+    --space-small: var(--spacing-sm);
+    --space-medium: var(--spacing-md);
+    --space-large: var(--spacing-lg);
+    --font-body: var(--font-family-sans);
+    --font-family-base: var(--font-family-sans);
+    --font-size-base: var(--font-size-md);
+    --radius: var(--radius-lg);
+    --radius-base: var(--radius-md);
 }

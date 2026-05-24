@@ -9,7 +9,7 @@
 }
 
 .site-nav a {
-   color: #fff;
+   color: var(--color-on-accent);
    text-decoration: none;
    padding: var(--space-small) var(--space-medium);
    border-radius: var(--radius-base);

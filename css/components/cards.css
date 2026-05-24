@@ -1,8 +1,8 @@
 .card {
-  background: var(--color-bg, #fff);
-  color: var(--color-text, #222);
+  background: var(--color-surface);
+  color: var(--color-text);
   border-radius: var(--radius, 0.75rem);
-  box-shadow: var(--shadow, 0 2px 8px 0 rgba(0, 110, 182, 0.08));
+  box-shadow: 0 2px 8px 0 var(--color-shadow);
   padding: var(--space-lg, 2rem);
   margin-bottom: var(--space-lg, 2rem);
   transition: box-shadow 0.2s;
@@ -11,7 +11,7 @@
   gap: var(--space-md, 1rem);
 }
 .card:hover {
-  box-shadow: 0 4px 16px 0 rgba(0, 110, 182, 0.16);
+  box-shadow: 0 4px 16px 0 var(--color-shadow);
 }
 .card-title {
   font-size: var(--font-size-h1, 2rem);

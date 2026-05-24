@@ -9,6 +9,10 @@ Each week I add new pages and styles as I work through the course
 assignments. The site deploys automatically to GitHub Pages on
 every push to main.
 
+The site supports light, dark, and system themes with a persistent
+theme toggle. Shared color tokens live in `css/tokens/colors.css`, and
+the Unit 2 page uses `unit-2/css/tokens/colors.css`.
+
 ## Pages
 
 - [Home](index.html)
@@ -18,6 +22,7 @@ every push to main.
 
 ## Folder Structure
 ```
+README.md
 css/
   base/
   components/
@@ -26,6 +31,14 @@ css/
   utilities/
   main.css
 dist/
+index.html
+js/
+  theme-preference.js
+unit-1/
+  custom-properties/
+unit-2/
+  css/
+  index.html
 ```
 
 ## Build Tool
