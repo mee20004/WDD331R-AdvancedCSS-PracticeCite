@@ -2,7 +2,7 @@
   "name": "wdd331r-advancedcss-practicecite",
   "version": "1.0.0",
   "description": "**Student:** Kameron Meeker **Semester:** Spring 2026 **Live Site:** [View Site](https://mee20004.github.io/WDD331R-AdvancedCSS-PracticeCite/)",
-  "main": "index.js",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "postcss css/main.css -o dist/styles.css",
@@ -16,5 +16,10 @@
     "postcss": "^8.5.14",
     "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.1"
+  },
+  "dependencies": {
+    "expo": "^56.0.6",
+    "react": "19.2.3",
+    "react-native": "0.85.3"
   }
 }

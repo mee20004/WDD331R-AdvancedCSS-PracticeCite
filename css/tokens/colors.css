@@ -57,8 +57,6 @@ html {
 	--theme-toggle-border-hover: color-mix(in srgb, var(--header-text) 55%, var(--header-bg));
 
 	--shadow-color: var(--color-shadow);
-	--shadow-sm: 0 1px 2px 0 var(--shadow-color);
-	--shadow-md: 0 1px 3px 0 var(--shadow-color);
 
 	--color-background: var(--color-bg);
 	--color-primary: var(--color-accent);
