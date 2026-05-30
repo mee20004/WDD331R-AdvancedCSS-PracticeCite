@@ -1,0 +1,36 @@
+body {
+	background: var(--color-bg);
+	color: var(--color-text);
+	font-family: var(--font-family-sans);
+	font-size: var(--font-size-md);
+	line-height: 1.6;
+	margin: 0;
+	padding: var(--spacing-lg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--color-text);
+	margin-top: 0;
+}
+
+a {
+	color: var(--color-link);
+	transition: color var(--transition-base);
+}
+
+a:hover,
+a:focus-visible {
+	color: var(--color-link-hover);
+}
+
+.site-header {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: var(--spacing-md);
+}
+

@@ -1,0 +1,174 @@
+@import url('../../css/tokens/colors.css');
+@import url('../../css/tokens/variables.css');
+@import url('../../css/components/theme-toggle.css');
+
+:root {
+	--shadow-solid: 0 8px 0 0 var(--color-shadow);
+
+	--space-sm: 0.5rem;
+	--space-md: 1rem;
+	--space-lg: 2rem;
+
+	--font-body: system-ui, -apple-system, sans-serif;
+	--font-size-base: clamp(1rem, 0.95rem + 0.5vw, 1.15rem);
+	--font-size-h1: clamp(2rem, 1.5rem + 3vw, 2.8rem);
+	--spacing-sm: var(--space-sm);
+	--spacing-md: var(--space-md);
+	--spacing-lg: var(--space-lg);
+	--radius-sm: 4px;
+	--icon-size-sm: 24px;
+	--icon-size-md: 32px;
+	--transition-base: 0.2s ease;
+	--outline-width: 2px;
+	--header-bg: var(--color-accent);
+	--header-text: var(--color-on-accent);
+	--theme-toggle-bg: color-mix(in srgb, var(--header-text) 20%, var(--header-bg));
+	--theme-toggle-border: color-mix(in srgb, var(--header-text) 40%, var(--header-bg));
+	--theme-toggle-bg-hover: color-mix(in srgb, var(--header-text) 30%, var(--header-bg));
+	--theme-toggle-border-hover: color-mix(in srgb, var(--header-text) 55%, var(--header-bg));
+
+	--radius: 0.75rem;
+	--shadow: 0 2px 8px 0 rgba(0, 110, 182, 0.08);
+	--gap-cards: calc(var(--space-md) * 2);
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
+}
+
+body {
+	font-family: var(--font-body);
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	line-height: 1.6;
+	padding: clamp(var(--space-md), 4vw, var(--space-lg));
+
+	a {
+		color: var(--color-primary);
+		text-decoration: underline;
+		transition: color 0.2s;
+		&:hover {
+			color: var(--color-primary-hover, #004f7f);
+		}
+	}
+}
+
+.site-nav {
+	padding: var(--space-sm) 0;
+	margin-bottom: var(--space-lg);
+	a {
+		font-weight: 500;
+		color: var(--color-primary);
+		text-decoration: none;
+		&:hover {
+			color: var(--color-primary-hover);
+			text-decoration: underline;
+		}
+	}
+}
+
+.board-header {
+	text-align: center;
+	margin-bottom: var(--space-lg);
+	padding: var(--space-md) 0;
+	h1 {
+		font-size: var(--font-size-h1);
+		font-weight: 600;
+		margin-bottom: var(--space-sm);
+		color: var(--color-primary);
+		letter-spacing: 0;
+	}
+	p {
+		color: var(--color-muted);
+		margin-bottom: var(--space-md);
+		font-size: 1rem;
+	}
+}
+
+.card-group {
+	margin-bottom: var(--space-lg);
+	h2 {
+		font-size: 1.15rem;
+		color: var(--color-primary);
+		font-weight: 600;
+		margin-bottom: var(--space-md);
+		letter-spacing: 0.01em;
+		text-transform: uppercase;
+	}
+}
+
+.cards {
+	display: grid;
+	gap: var(--gap-cards);
+	grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+	align-items: stretch;
+}
+
+.card {
+	background: var(--color-surface);
+	padding: var(--space-lg);
+	border-radius: var(--radius, 12px);
+	box-shadow: var(--shadow-solid, 0 8px 0 0 #2226);
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+	.card-tag {
+		font-size: 0.8rem;
+		padding: 0.18em 0.7em;
+		background: var(--color-muted, #64748b);
+		color: var(--color-on-accent);
+		border-radius: calc(var(--radius) / 2);
+		font-weight: 500;
+		align-self: flex-start;
+		margin-bottom: var(--space-sm);
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+	}
+	h3 {
+		font-size: 1.08rem;
+		font-weight: 500;
+		margin-bottom: var(--space-sm);
+		color: var(--color-primary);
+	}
+	p {
+		color: var(--color-text);
+		font-size: 1rem;
+		flex: 1 1 auto;
+	}
+	.card-meta {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 0.95rem;
+		color: var(--color-muted);
+		span {
+			font-style: italic;
+		}
+		a {
+			color: var(--color-primary);
+			text-decoration: none;
+			font-weight: 500;
+			&:hover {
+				text-decoration: underline;
+				color: var(--color-primary-hover, #004f7f);
+			}
+		}
+	}
+}
+
+.board-footer {
+	text-align: center;
+	padding: var(--space-md) 0;
+	color: var(--color-muted);
+	border-top: 1px solid var(--color-border);
+	font-size: 0.98rem;
+	margin-top: var(--space-lg);
+}

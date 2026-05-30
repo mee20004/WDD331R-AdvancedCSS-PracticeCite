@@ -1,0 +1,33 @@
+/* Navigation component: .site-nav and its links
+   Style the active link using aria-current. */
+
+.site-nav {
+   display: flex;
+   gap: var(--space-large);
+   background: var(--color-primary);
+   padding: var(--space-medium);
+}
+
+.site-nav a {
+   color: var(--color-on-accent);
+   text-decoration: none;
+   padding: var(--space-small) var(--space-medium);
+   border-radius: var(--radius-base);
+   transition: background 0.2s, color 0.2s;
+   &:not([aria-current]) {
+      &:hover,
+      &:focus-visible {
+         background: var(--color-accent);
+         color: var(--color-text);
+      }
+   }
+   &[aria-current] {
+      background: var(--color-accent);
+      color: var(--color-text);
+      font-weight: bold;
+   }
+   &:focus-visible {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 2px;
+   }
+}
