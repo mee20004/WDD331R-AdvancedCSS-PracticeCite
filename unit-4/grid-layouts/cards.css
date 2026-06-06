@@ -1,0 +1,81 @@
+.articles-page {
+	margin: 0;
+	background: var(--color-background);
+	color: var(--color-text);
+	font-family: var(--font-body);
+}
+
+.articles-page header,
+.articles-page main {
+	max-width: 1120px;
+	margin-inline: auto;
+	padding-inline: var(--space-lg);
+}
+
+.articles-page header {
+	padding-top: var(--space-lg);
+	padding-bottom: var(--space-md);
+}
+
+.articles-page .card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+	gap: var(--space-lg);
+	padding-block: var(--space-md) var(--space-xl);
+}
+
+.articles-page .card {
+	display: flex;
+	flex-direction: column;
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+	overflow: clip;
+}
+
+.articles-page .card > div:first-child {
+	block-size: 9.5rem;
+	flex: 0 0 auto;
+	background:
+		linear-gradient(140deg, color-mix(in srgb, var(--color-accent) 28%, transparent), transparent 70%),
+		color-mix(in srgb, var(--color-accent) 10%, var(--color-surface));
+	border-bottom: 1px solid var(--color-border);
+}
+
+.articles-page .card > div:last-child {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	gap: var(--space-sm);
+	padding: var(--space-md);
+}
+
+.articles-page .card h2 {
+	margin: 0;
+	font-size: var(--font-size-lg);
+}
+
+.articles-page .card p {
+	margin: 0;
+	color: var(--color-text-muted);
+}
+
+.articles-page .card a {
+	margin-top: auto;
+	align-self: start;
+	padding: 0.35rem 0.7rem;
+	border-radius: var(--radius-base);
+	border: 1px solid color-mix(in srgb, var(--color-accent) 35%, var(--color-border));
+	background: color-mix(in srgb, var(--color-accent) 10%, var(--color-surface));
+	color: var(--color-link);
+	text-decoration: none;
+	transition: background var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+}
+
+.articles-page .card a:hover,
+.articles-page .card a:focus-visible {
+	background: color-mix(in srgb, var(--color-accent) 18%, var(--color-surface));
+	border-color: color-mix(in srgb, var(--color-accent) 55%, var(--color-border));
+	color: var(--color-link-hover);
+}

@@ -18,6 +18,9 @@ the Unit 2 page uses `unit-2/css/tokens/colors.css`.
 - [Home](index.html)
 - [Unit 1: Custom Properties and Nesting](unit-1/custom-properties/index.html)
 - [Unit 2: Design Tokens & Components](unit-2/index.html)
+- [Unit 3: Visual Effects](unit-3/visual-effects/index.html)
+- [Unit 4: Grid Layouts - Editorial](unit-4/grid-layouts/editorial.html)
+- [Unit 4: Grid Layouts - Cards](unit-4/grid-layouts/cards.html)
 
 
 ## Folder Structure
@@ -39,6 +42,14 @@ unit-1/
 unit-2/
   css/
   index.html
+unit-3/
+  visual-effects/
+unit-4/
+  grid-layouts/
+    editorial.html
+    editorial.css
+    cards.html
+    cards.css
 ```
 
 ## Build Tool
