@@ -20,7 +20,9 @@ the Unit 2 page uses `unit-2/css/tokens/colors.css`.
 - [Unit 2: Design Tokens & Components](unit-2/index.html)
 - [Unit 3: Visual Effects](unit-3/visual-effects/index.html)
 - [Unit 4: Grid Layouts - Editorial](unit-4/grid-layouts/editorial.html)
-- [Unit 4: Grid Layouts - Cards](unit-4/grid-layouts/cards.html)
+- [Unit 4: Grid Layouts - Cards (Subgrid)](unit-4/grid-layouts/cards.html)
+- [Unit 4: Container Queries](unit-4/advanced/container-demo.html)
+- [Unit 4: Sticky Positioning](unit-4/advanced/sticky-demo.html)
 
 
 ## Folder Structure
@@ -50,6 +52,11 @@ unit-4/
     editorial.css
     cards.html
     cards.css
+  advanced/
+    container-demo.html
+    container-demo.css
+    sticky-demo.html
+    sticky-demo.css
 ```
 
 ## Build Tool

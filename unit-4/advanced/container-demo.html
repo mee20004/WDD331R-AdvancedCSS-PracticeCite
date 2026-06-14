@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Queries</title>
+    <link rel="stylesheet" href="../../dist/styles.css">
+    <link rel="stylesheet" href="container-demo.css">
+</head>
+<body class="container-demo-page">
+
+    <header>
+        <h1>Container Queries</h1>
+        <p>The same feature block adapts to its placement, not the viewport.</p>
+    </header>
+
+    <div class="page-layout">
+
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <div class="placement placement--sidebar">
+                <article class="feature-block">
+                    <div class="feature-block__media" aria-hidden="true"></div>
+                    <div class="feature-block__body">
+                        <h3>Design Tokens</h3>
+                        <p>
+                            Shared variables keep color, spacing, and type consistent
+                            across every page in the practice site.
+                        </p>
+                    </div>
+                    <a class="feature-block__action" href="#">Explore</a>
+                </article>
+            </div>
+        </aside>
+
+        <section class="main-area">
+            <h2>Main Content</h2>
+            <div class="placement placement--main">
+                <article class="feature-block">
+                    <div class="feature-block__media" aria-hidden="true"></div>
+                    <div class="feature-block__body">
+                        <h3>Grid Layouts</h3>
+                        <p>
+                            Editorial columns, card grids, and named areas show how
+                            CSS Grid handles page-level structure without extra markup.
+                        </p>
+                    </div>
+                    <a class="feature-block__action" href="#">Explore</a>
+                </article>
+
+                <article class="feature-block">
+                    <div class="feature-block__media" aria-hidden="true"></div>
+                    <div class="feature-block__body">
+                        <h3>Visual Effects</h3>
+                        <p>
+                            Backdrop filters, blend modes, and layered shadows add depth
+                            while staying within a token-driven palette.
+                        </p>
+                    </div>
+                    <a class="feature-block__action" href="#">Explore</a>
+                </article>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>

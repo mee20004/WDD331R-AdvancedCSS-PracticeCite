@@ -52,5 +52,6 @@
 	--shadow: var(--shadow-sm);
 	--shadow-solid: 0 8px 0 0 #2226;
 	--gap-cards: calc(var(--spacing-md) * 2);
+	--sticky-offset: var(--space-lg);
 }
 
