@@ -1,0 +1,107 @@
+.sticky-demo-page {
+	margin: 0;
+	background: var(--color-background);
+	color: var(--color-text);
+	font-family: var(--font-body);
+	line-height: 1.6;
+}
+
+.sticky-demo-header {
+	max-width: 1120px;
+	margin-inline: auto;
+	padding: var(--space-lg) var(--space-lg) var(--space-md);
+}
+
+.sticky-demo-header h1 {
+	margin: 0 0 var(--space-sm);
+	font-size: var(--font-size-lg);
+}
+
+.sticky-demo-header p {
+	margin: 0;
+	color: var(--color-text-muted);
+}
+
+.sticky-demo-shell {
+	max-width: 1120px;
+	margin-inline: auto;
+	margin-block-end: var(--space-xl);
+	padding: var(--space-lg);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius);
+	background: color-mix(in srgb, var(--color-surface) 92%, var(--color-accent) 8%);
+	/* overflow:hidden on this shell clipped the layout to the border radius but also became the sticky containing block between the TOC and the viewport, so position:sticky never engaged. Removed overflow from the shell and moved border-radius onto .sticky-demo-sidebar and .sticky-demo-content instead, keeping the rounded panel look without trapping sticky. */
+}
+
+.sticky-demo-layout {
+	display: grid;
+	grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+	gap: var(--space-lg);
+}
+
+.sticky-demo-sidebar {
+	align-self: stretch;
+	border-radius: var(--radius);
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	box-shadow: var(--shadow);
+}
+
+.toc {
+	position: sticky;
+	top: var(--sticky-offset, var(--space-lg));
+	padding: var(--space-md);
+}
+
+.toc h2 {
+	margin: 0 0 var(--space-sm);
+	font-size: var(--font-size-md);
+}
+
+.toc ol {
+	margin: 0;
+	padding-inline-start: 1.25rem;
+	display: grid;
+	gap: var(--space-xs);
+}
+
+.toc a {
+	color: var(--color-link);
+	text-decoration: none;
+	transition: color var(--transition-base);
+}
+
+.toc a:hover,
+.toc a:focus-visible {
+	color: var(--color-link-hover);
+}
+
+.sticky-demo-content {
+	padding: var(--space-lg);
+	border-radius: var(--radius);
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	box-shadow: var(--shadow);
+	overflow: hidden;
+}
+
+.sticky-demo-content section + section {
+	margin-block-start: var(--space-xl);
+	padding-block-start: var(--space-xl);
+	border-block-start: 1px solid var(--color-border);
+}
+
+.sticky-demo-content h2 {
+	margin: 0 0 var(--space-md);
+	font-size: var(--font-size-lg);
+	scroll-margin-top: calc(var(--sticky-offset) + var(--space-md));
+}
+
+.sticky-demo-content p {
+	margin: 0 0 var(--space-md);
+	color: var(--color-text-muted);
+}
+
+.sticky-demo-content p:last-child {
+	margin-block-end: 0;
+}

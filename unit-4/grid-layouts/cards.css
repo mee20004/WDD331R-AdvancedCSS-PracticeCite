@@ -79,3 +79,36 @@
 	border-color: color-mix(in srgb, var(--color-accent) 55%, var(--color-border));
 	color: var(--color-link-hover);
 }
+
+@supports (grid-template-rows: subgrid) {
+	.articles-page .card-grid {
+		grid-template-rows: auto 1fr auto;
+		align-items: start;
+		row-gap: var(--space-sm);
+	}
+
+	.articles-page .card {
+		position: relative;
+		display: grid;
+		grid-row: span 3;
+		grid-template-rows: subgrid;
+		flex-direction: unset;
+		padding: var(--space-md);
+		padding-block-start: calc(9.5rem + var(--space-md));
+	}
+
+	.articles-page .card > div:first-child {
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline: 0;
+		flex: unset;
+	}
+
+	.articles-page .card > div:last-child {
+		display: contents;
+	}
+
+	.articles-page .card a {
+		margin-top: 0;
+	}
+}

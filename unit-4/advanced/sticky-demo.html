@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Positioning</title>
+    <link rel="stylesheet" href="../../dist/styles.css">
+    <link rel="stylesheet" href="sticky-demo.css">
+</head>
+<body class="sticky-demo-page">
+
+    <header class="sticky-demo-header">
+        <h1>Sticky Positioning</h1>
+        <p>A table of contents that follows you down a long article.</p>
+    </header>
+
+    <div class="sticky-demo-shell">
+        <div class="sticky-demo-layout">
+
+            <aside class="sticky-demo-sidebar">
+                <nav class="toc" aria-label="On this page">
+                    <h2>On this page</h2>
+                    <ol>
+                        <li><a href="#how-sticky-works">How sticky works</a></li>
+                        <li><a href="#offset-property">The offset property</a></li>
+                        <li><a href="#scroll-containers">Scroll containers</a></li>
+                        <li><a href="#overflow-trap">The overflow trap</a></li>
+                        <li><a href="#fixing-sticky">Fixing sticky</a></li>
+                        <li><a href="#when-to-use">When to use it</a></li>
+                    </ol>
+                </nav>
+            </aside>
+
+            <article class="sticky-demo-content">
+
+                <section id="how-sticky-works">
+                    <h2>How sticky works</h2>
+                    <p>
+                        Position sticky sits between relative and fixed. An element stays in
+                        normal flow until its scroll container reaches a threshold, then it
+                        sticks at the offset you define until its parent scrolls out of view.
+                    </p>
+                    <p>
+                        Unlike fixed positioning, sticky keeps the element in document flow
+                        until the stick point triggers. That makes it ideal for in-page
+                        navigation, section labels, and comparison columns that should remain
+                        visible while their related content is on screen.
+                    </p>
+                    <p>
+                        The sticky box still occupies space in the layout. Siblings reflow
+                        around it the same way they would for a relatively positioned element
+                        until the stick behavior engages during scroll.
+                    </p>
+                </section>
+
+                <section id="offset-property">
+                    <h2>The offset property</h2>
+                    <p>
+                        Sticky positioning requires an inset: top, bottom, inset-block-start,
+                        or the logical equivalent. Without one, the browser treats the element
+                        as effectively static and nothing appears to stick.
+                    </p>
+                    <p>
+                        This demo uses top: var(--sticky-offset) so the table of contents
+                        clears the page header and leaves breathing room at the top of the
+                        viewport while you read.
+                    </p>
+                    <p>
+                        Choose the offset to match your site chrome. A fixed site header,
+                        a banner, or safe-area insets on mobile all change the value that
+                        keeps sticky content from hiding under other UI.
+                    </p>
+                </section>
+
+                <section id="scroll-containers">
+                    <h2>Scroll containers</h2>
+                    <p>
+                        Sticky is always evaluated against the nearest scroll ancestor. On
+                        most article pages that ancestor is the viewport, so the TOC sticks
+                        while you scroll the document.
+                    </p>
+                    <p>
+                        If a parent creates its own scrollport with overflow auto or scroll,
+                        sticky activates within that box instead. The element never escapes
+                        the padded rectangle of its scrolling ancestor.
+                    </p>
+                    <p>
+                        Nested scroll areas are useful for dashboards and split panels, but
+                        they change where sticky elements can travel. Always trace the chain
+                        from the sticky node up to the element that actually scrolls.
+                    </p>
+                </section>
+
+                <section id="overflow-trap">
+                    <h2>The overflow trap</h2>
+                    <p>
+                        Overflow hidden on an ancestor between the sticky element and the
+                        viewport creates a containing block that prevents viewport sticking.
+                        The TOC looks configured correctly yet scrolls away like a normal
+                        block.
+                    </p>
+                    <p>
+                        This page wraps the layout in a rounded shell. That shell originally
+                        used overflow hidden to clip children to the border radius. Scroll
+                        the page and watch the sidebar: sticky breaks until the fix below
+                        is applied in the stylesheet.
+                    </p>
+                    <p>
+                        The failure is silent. There is no console error. DevTools still show
+                        position sticky on the element. The bug is structural: the wrong
+                        ancestor owns overflow and becomes the sticky containing block.
+                    </p>
+                </section>
+
+                <section id="fixing-sticky">
+                    <h2>Fixing sticky</h2>
+                    <p>
+                        Removing overflow hidden from the shell restores viewport sticking, but
+                        the shell no longer clips its corners. You can keep the rounded panel
+                        look by moving border radius to each column instead of clipping the
+                        whole grid from the outside.
+                    </p>
+                    <p>
+                        Apply overflow hidden only on branches that do not contain the sticky
+                        element, such as the main article column if you need to clip inner
+                        media. Leave the sidebar branch and the shared shell overflow visible.
+                    </p>
+                    <p>
+                        Alternative techniques include clip-path on non-sticky regions or
+                        masking individual cards. The goal is the same visual without placing
+                        overflow hidden on an ancestor of the sticky node.
+                    </p>
+                </section>
+
+                <section id="when-to-use">
+                    <h2>When to use it</h2>
+                    <p>
+                        Reach for sticky when context should stay visible during a long read:
+                        documentation TOCs, filter bars above product grids, and column
+                        headers in wide tables all benefit.
+                    </p>
+                    <p>
+                        Avoid sticky when the stuck element would cover critical content on
+                        small screens, or when overflow ancestors make behavior unpredictable.
+                        Test with real scroll length and real ancestor styles.
+                    </p>
+                    <p>
+                        Combined with scroll-margin-top on section headings, sticky navigation
+                        makes in-page links land with comfortable spacing beneath a stuck TOC
+                        or site header.
+                    </p>
+                </section>
+
+            </article>
+
+        </div>
+    </div>
+
+</body>
+</html>
