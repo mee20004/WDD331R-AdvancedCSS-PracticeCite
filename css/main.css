@@ -1,5 +1,7 @@
 @layer tokens, base, layout, components, utilities;
 
+@import url('fonts.css');
+
 @import url('tokens/colors.css') layer(tokens);
 @import url('tokens/variables.css') layer(tokens);
 

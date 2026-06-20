@@ -64,7 +64,8 @@
 }
 
 .visual-effects-page .hero h1 {
-	font-size: clamp(2rem, 3.4vw, 3rem);
+	font-size: var(--font-size-display);
+	line-height: var(--line-height-display);
 	margin-bottom: var(--spacing-sm);
 	color: inherit;
 	text-shadow:
@@ -236,7 +237,8 @@
 	padding-top: var(--spacing-md);
 	border-top: 1px solid var(--color-border);
 	color: var(--color-text-muted);
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-caption);
+	line-height: var(--line-height-caption);
 }
 
 @media (max-width: 640px) {

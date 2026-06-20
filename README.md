@@ -11,7 +11,20 @@ every push to main.
 
 The site supports light, dark, and system themes with a persistent
 theme toggle. Shared color tokens live in `css/tokens/colors.css`, and
-the Unit 2 page uses `unit-2/css/tokens/colors.css`.
+typography tokens live in `css/tokens/variables.css`. Typography uses a
+major-third modular scale (ratio 1.25) with fluid `clamp()` steps from
+320px to 1280px, semantic role tokens for body/headings/captions, and
+self-hosted Source Sans 3 with `font-display: swap`. The Unit 2 page
+uses `unit-2/css/tokens/colors.css`.
+
+## Typography
+
+- **Scale ratio:** major third (1.25)
+- **Scale steps:** `--font-size-xs` through `--font-size-3xl` in `css/tokens/variables.css`
+- **Fluid range:** 320px–1280px viewport for `--font-size-lg` and above
+- **Semantic roles:** `--font-size-body`, `--font-size-caption`, `--font-size-heading-sm`, `--font-size-heading-md`, `--font-size-heading-lg`, `--font-size-display`
+- **Web font:** Source Sans 3 (self-hosted in `fonts/`, loaded via `css/fonts.css`)
+- **Font display:** `swap`
 
 ## Pages
 
@@ -30,12 +43,14 @@ the Unit 2 page uses `unit-2/css/tokens/colors.css`.
 README.md
 css/
   base/
+  fonts.css
   components/
   layout/
   tokens/
   utilities/
   main.css
 dist/
+fonts/
 index.html
 js/
   theme-preference.js
