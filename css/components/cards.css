@@ -14,19 +14,24 @@
   box-shadow: 0 4px 16px 0 var(--color-shadow);
 }
 .card-title {
-  font-size: var(--font-size-h1, 2rem);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-display);
+  line-height: var(--line-height-display);
   margin-bottom: var(--space-sm, 0.5rem);
 }
 .card-links {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-md, 1rem);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
 }
 @media (max-width: 600px) {
   .card {
     padding: var(--space-md, 1rem);
   }
   .card-title {
-    font-size: 1.5rem;
+    font-size: var(--font-size-heading-lg);
+    line-height: var(--line-height-2xl);
   }
 }

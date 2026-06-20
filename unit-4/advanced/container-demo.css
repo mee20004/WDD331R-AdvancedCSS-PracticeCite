@@ -13,7 +13,8 @@
 
 .container-demo-page header h1 {
 	margin: 0 0 var(--space-sm);
-	font-size: var(--font-size-lg);
+	font-size: var(--font-size-heading-lg);
+	line-height: var(--line-height-2xl);
 }
 
 .container-demo-page header p {
@@ -33,7 +34,7 @@
 .sidebar h2,
 .main-area h2 {
 	margin: 0 0 var(--space-md);
-	font-size: var(--font-size-md);
+	font-size: var(--font-size-heading-sm);
 	color: var(--color-text-muted);
 }
 
@@ -70,7 +71,8 @@
 
 .feature-block__body h3 {
 	margin: 0 0 var(--space-xs);
-	font-size: var(--font-size-lg);
+	font-size: var(--font-size-heading-sm);
+	line-height: var(--line-height-lg);
 }
 
 .feature-block__body p {
