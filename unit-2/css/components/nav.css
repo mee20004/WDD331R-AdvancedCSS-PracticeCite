@@ -8,6 +8,18 @@
    padding: var(--space-medium);
 }
 
+.site-nav ul {
+   display: flex;
+   gap: var(--space-small);
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.site-nav li {
+   margin: 0;
+}
+
 .site-nav a {
    color: var(--color-on-accent);
    text-decoration: none;

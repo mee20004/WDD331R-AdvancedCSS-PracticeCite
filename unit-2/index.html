@@ -8,13 +8,88 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-hidden="true">
+        <symbol id="icon-book-open" viewBox="0 0 24 24">
+            <path d="M12 7v14" />
+            <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
+        </symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+            <path d="m12 19-7-7 7-7" />
+            <path d="M19 12H5" />
+        </symbol>
+        <symbol id="icon-bookmark" viewBox="0 0 24 24">
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+        </symbol>
+        <symbol id="icon-notebook-pen" viewBox="0 0 24 24">
+            <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" />
+            <path d="M2 6h4" />
+            <path d="M2 10h4" />
+            <path d="M2 14h4" />
+            <path d="M2 18h4" />
+            <path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" />
+        </symbol>
+        <symbol id="icon-church" viewBox="0 0 24 24">
+            <path d="M10 9h4" />
+            <path d="M12 7v5" />
+            <path d="M14 22v-4a2 2 0 0 0-4 0v4" />
+            <path d="M18 22V5.618a1 1 0 0 0-.553-.894l-4.553-2.277a2 2 0 0 0-1.788 0L6.553 4.724A1 1 0 0 0 6 5.618V22" />
+            <path d="m18 7 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.618a1 1 0 0 1 .553-.894L6 7" />
+        </symbol>
+        <symbol id="icon-plus" viewBox="0 0 24 24">
+            <path d="M5 12h14" />
+            <path d="M12 5v14" />
+        </symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+        </symbol>
+    </svg>
+
     <nav class="site-nav">
-        <a href="../../index.html">&larr; Home</a>
+        <a href="../../index.html" class="has-icon">
+            <svg class="icon" viewBox="0 0 24 24" width="24" height="24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true" focusable="false">
+                <use href="#icon-arrow-left"></use>
+            </svg>
+            <span class="visually-hidden">Home</span>
+        </a>
         <ul>
             <li><a href="#" aria-current="page">Study</a></li>
-            <li><a href="#">Bookmarks</a></li>
-            <li><a href="#">Journal</a></li>
-            <li><a href="#">Temples</a></li>
+            <li>
+                <a href="#" class="has-icon">
+                    <svg class="icon" viewBox="0 0 24 24" width="24" height="24"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true" focusable="false">
+                        <use href="#icon-bookmark"></use>
+                    </svg>
+                    Bookmarks
+                </a>
+            </li>
+            <li>
+                <a href="#" class="has-icon">
+                    <svg class="icon" viewBox="0 0 24 24" width="24" height="24"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true" focusable="false">
+                        <use href="#icon-notebook-pen"></use>
+                    </svg>
+                    Journal
+                </a>
+            </li>
+            <li>
+                <a href="#" class="has-icon">
+                    <svg class="icon" viewBox="0 0 24 24" width="24" height="24"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true" focusable="false">
+                        <use href="#icon-church"></use>
+                    </svg>
+                    Temples
+                </a>
+            </li>
         </ul>
         <details class="theme-menu">
             <summary class="theme-control">
@@ -41,7 +116,16 @@
     </nav>
 
     <header class="page-header">
-        <h1>Scripture Study Companion</h1>
+        <h1>
+            <svg class="icon" viewBox="0 0 24 24" width="24" height="24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 role="img" aria-labelledby="companion-logo-title">
+                <title id="companion-logo-title">Scripture Study Companion</title>
+                <use href="#icon-book-open"></use>
+            </svg>
+            Scripture Study Companion
+        </h1>
         <p>Explore topics, save insights, and deepen your understanding of the gospel of Jesus Christ.</p>
     </header>
 
@@ -55,7 +139,15 @@
                     <p>Alma teaches that Christ would take upon Himself the pains, sicknesses, and infirmities of His people so that He would know how to succor them.</p>
                     <div class="card-footer">
                         <span>Alma 7:11&ndash;13</span>
-                        <a href="#">Read</a>
+                        <a href="#" class="has-icon">
+                            <svg class="icon" viewBox="0 0 24 24" width="24" height="24"
+                                 fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true" focusable="false">
+                                <use href="#icon-arrow-right"></use>
+                            </svg>
+                            Read
+                        </a>
                     </div>
                 </article>
                 <article class="card">
@@ -64,7 +156,15 @@
                     <p>The Lord speaks peace to the mind and heart through the Holy Ghost. Learning to recognize these promptings is central to spiritual growth.</p>
                     <div class="card-footer">
                         <span>D&amp;C 8:2&ndash;3</span>
-                        <a href="#">Read</a>
+                        <a href="#" class="has-icon">
+                            <svg class="icon" viewBox="0 0 24 24" width="24" height="24"
+                                 fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true" focusable="false">
+                                <use href="#icon-arrow-right"></use>
+                            </svg>
+                            Read
+                        </a>
                     </div>
                 </article>
                 <article class="card">
@@ -73,7 +173,15 @@
                     <p>The Savior taught that faith as small as a mustard seed can move mountains. Faith is not just belief but a principle of action and power.</p>
                     <div class="card-footer">
                         <span>Matthew 17:20</span>
-                        <a href="#">Read</a>
+                        <a href="#" class="has-icon">
+                            <svg class="icon" viewBox="0 0 24 24" width="24" height="24"
+                                 fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true" focusable="false">
+                                <use href="#icon-arrow-right"></use>
+                            </svg>
+                            Read
+                        </a>
                     </div>
                 </article>
                 <article class="card">
@@ -82,7 +190,15 @@
                     <p>Abraham saw that intelligences were organized before the world was, and that among them God chose noble and great ones to be rulers.</p>
                     <div class="card-footer">
                         <span>Abraham 3:22&ndash;23</span>
-                        <a href="#">Read</a>
+                        <a href="#" class="has-icon">
+                            <svg class="icon" viewBox="0 0 24 24" width="24" height="24"
+                                 fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true" focusable="false">
+                                <use href="#icon-arrow-right"></use>
+                            </svg>
+                            Read
+                        </a>
                     </div>
                 </article>
                 <article class="card">
@@ -91,7 +207,15 @@
                     <p>Lehi and Nephi both saw that the tree of life represents the love of God, which is most desirable above all things and most joyous to the soul.</p>
                     <div class="card-footer">
                         <span>1 Nephi 11:21&ndash;23</span>
-                        <a href="#">Read</a>
+                        <a href="#" class="has-icon">
+                            <svg class="icon" viewBox="0 0 24 24" width="24" height="24"
+                                 fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true" focusable="false">
+                                <use href="#icon-arrow-right"></use>
+                            </svg>
+                            Read
+                        </a>
                     </div>
                 </article>
                 <article class="card">
@@ -100,7 +224,15 @@
                     <p>Paul wrote that charity is the greatest of all gifts. It suffers long, is kind, and endures all things. Without it, all other gifts are nothing.</p>
                     <div class="card-footer">
                         <span>1 Corinthians 13:4&ndash;8</span>
-                        <a href="#">Read</a>
+                        <a href="#" class="has-icon">
+                            <svg class="icon" viewBox="0 0 24 24" width="24" height="24"
+                                 fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true" focusable="false">
+                                <use href="#icon-arrow-right"></use>
+                            </svg>
+                            Read
+                        </a>
                     </div>
                 </article>
             </div>
@@ -109,7 +241,15 @@
         <section class="actions">
             <h2>Quick Actions</h2>
             <div class="button-group">
-                <button class="btn primary">New Study Session</button>
+                <button class="btn primary has-icon">
+                    <svg class="icon" viewBox="0 0 24 24" width="24" height="24"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true" focusable="false">
+                        <use href="#icon-plus"></use>
+                    </svg>
+                    New Study Session
+                </button>
                 <button class="btn secondary">View Bookmarks</button>
                 <button class="btn secondary">Export Journal</button>
                 <button class="btn primary" disabled>Sync (Offline)</button>

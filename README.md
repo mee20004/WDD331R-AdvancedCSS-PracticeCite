@@ -15,7 +15,9 @@ typography tokens live in `css/tokens/variables.css`. Typography uses a
 major-third modular scale (ratio 1.25) with fluid `clamp()` steps from
 320px to 1280px, semantic role tokens for body/headings/captions, and
 self-hosted Source Sans 3 with `font-display: swap`. The Unit 2 page
-uses `unit-2/css/tokens/colors.css`.
+uses `unit-2/css/tokens/colors.css`. Unit 2 also demonstrates an
+accessible inline Lucide SVG sprite (`<symbol>` / `<use>`) with shared
+icon styles in `css/components/icons.css`.
 
 ## Typography
 
@@ -49,6 +51,7 @@ css/
   tokens/
   utilities/
   main.css
+  components/icons.css
 dist/
 fonts/
 index.html
