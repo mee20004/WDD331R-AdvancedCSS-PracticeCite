@@ -1,6 +1,12 @@
 /* Button components: .btn, .primary, .secondary, disabled state
    Use native nesting for pseudo-classes and modifiers. */
 
+.btn.has-icon {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.375em;
+}
+
 .btn {
    display: inline-block;
    padding: var(--space-small) var(--space-large);
