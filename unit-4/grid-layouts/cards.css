@@ -5,14 +5,14 @@
 	font-family: var(--font-body);
 }
 
-.articles-page header,
+.articles-page header:not(.portfolio-bar),
 .articles-page main {
 	max-width: 1120px;
 	margin-inline: auto;
 	padding-inline: var(--space-lg);
 }
 
-.articles-page header {
+.articles-page header:not(.portfolio-bar) {
 	padding-top: var(--space-lg);
 	padding-bottom: var(--space-md);
 }

@@ -40,6 +40,16 @@
 	gap: var(--space-lg);
 }
 
+@media (max-width: 48rem) {
+	.sticky-demo-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.toc {
+		position: static;
+	}
+}
+
 .sticky-demo-sidebar {
 	align-self: stretch;
 	border-radius: var(--radius);

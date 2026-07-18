@@ -1,8 +1,7 @@
-/* Navigation component: .site-nav and its links
-   Style the active link using aria-current. */
-
 .site-nav {
    display: flex;
+   flex-wrap: wrap;
+   align-items: center;
    gap: var(--space-large);
    background: var(--color-primary);
    padding: var(--space-medium);
@@ -10,6 +9,7 @@
 
 .site-nav ul {
    display: flex;
+   flex-wrap: wrap;
    gap: var(--space-small);
    list-style: none;
    margin: 0;
@@ -41,5 +41,15 @@
    &:focus-visible {
       outline: 2px solid var(--color-accent);
       outline-offset: 2px;
+   }
+}
+
+@media (max-width: 40rem) {
+   .site-nav {
+      gap: var(--space-small);
+   }
+
+   .site-nav a {
+      padding: var(--space-small);
    }
 }

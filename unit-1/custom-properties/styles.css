@@ -1,5 +1,6 @@
 @import url('../../css/tokens/colors.css');
 @import url('../../css/tokens/variables.css');
+@import url('../../css/components/portfolio.css');
 @import url('../../css/components/theme-toggle.css');
 
 :root {
