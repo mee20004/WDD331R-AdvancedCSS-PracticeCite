@@ -44,3 +44,21 @@
    background: var(--color-accent);
    color: var(--color-text);
 }
+
+.button-group {
+   display: flex;
+   flex-wrap: wrap;
+   gap: var(--space-medium);
+}
+
+@media (max-width: 40rem) {
+   .button-group {
+      flex-direction: column;
+      align-items: stretch;
+   }
+
+   .button-group .btn {
+      width: 100%;
+      text-align: center;
+   }
+}

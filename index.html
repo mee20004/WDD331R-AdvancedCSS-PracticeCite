@@ -3,12 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Kameron Meeker – Practice Site</title>
+	<title>Kameron Meeker – Frontend Portfolio</title>
 	<script src="js/theme-preference.js"></script>
 	<link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-	<header class="site-header">
+<body class="portfolio-home">
+	<header class="portfolio-header">
+		<a class="portfolio-header__brand" href="index.html">Kameron Meeker</a>
+		<nav class="portfolio-header__nav" aria-label="Primary">
+			<a href="#work">Work</a>
+			<a href="#about">About</a>
+			<a href="https://github.com/mee20004">GitHub</a>
+			<a href="mailto:kameronmeeker12@gmail.com">Email</a>
+		</nav>
 		<details class="theme-menu">
 			<summary class="theme-control">
 				<span class="visually-hidden">Color scheme</span>
@@ -32,22 +39,84 @@
 			</div>
 		</details>
 	</header>
-  <main class="card">
-	 <h1 class="card-title">Kameron Meeker</h1>
-	 <h2>WDD 331R Advanced CSS</h2>
-	 <p>Welcome to my WDD 331R Practice Site! Here I experiment with advanced CSS concepts and showcase my progress throughout the semester. Explore the assignments and topics below.</p>
-	 <section>
-		<h3>Assignments & Topics</h3>
-		<div class="card-links">
-		  <a href="unit-1/custom-properties/index.html">Unit 1: Custom Properties & Nesting</a>
-		  <a href="unit-2/index.html">Unit 2: Design Tokens & Components</a>
-		  <a href="unit-3/visual-effects/index.html">Unit 3: Visual Effects</a>
-		  <a href="unit-4/grid-layouts/editorial.html">Unit 4: Grid Layouts - Editorial</a>
-		  <a href="unit-4/grid-layouts/cards.html">Unit 4: Grid Layouts - Cards (Subgrid)</a>
-		  <a href="unit-4/advanced/container-demo.html">Unit 4: Container Queries</a>
-		  <a href="unit-4/advanced/sticky-demo.html">Unit 4: Sticky Positioning</a>
-		</div>
-	 </section>
-  </main>
+
+	<main>
+		<section class="portfolio-hero">
+			<h1>Frontend developer focused on accessible, modern CSS</h1>
+			<p>
+				I build responsive interfaces with design tokens, clear hierarchy, and
+				progressive enhancement. This site collects coursework from WDD 331R Advanced CSS.
+			</p>
+			<div class="portfolio-hero__actions">
+				<a class="portfolio-btn portfolio-btn--primary" href="#work">View my work</a>
+				<a class="portfolio-btn portfolio-btn--secondary" href="mailto:kameronmeeker12@gmail.com">Email me</a>
+			</div>
+		</section>
+
+		<section id="work" class="portfolio-section">
+			<h2>Featured work</h2>
+			<div class="portfolio-grid">
+				<article class="portfolio-card">
+					<h3>Scripture Study Companion</h3>
+					<p>Token-driven components, forms, and accessible SVG icons in a full page layout.</p>
+					<ul class="portfolio-tags">
+						<li>Design tokens</li>
+						<li>Components</li>
+						<li>SVG icons</li>
+					</ul>
+					<a class="portfolio-card__link" href="unit-2/index.html">View project</a>
+				</article>
+				<article class="portfolio-card">
+					<h3>Visual Effects</h3>
+					<p>Layered shadows, frosted glass, and image filters with a light and dark theme.</p>
+					<ul class="portfolio-tags">
+						<li>Shadows</li>
+						<li>Filters</li>
+						<li>Backdrop filter</li>
+					</ul>
+					<a class="portfolio-card__link" href="unit-3/visual-effects/index.html">View project</a>
+				</article>
+				<article class="portfolio-card">
+					<h3>Card Grid with Subgrid</h3>
+					<p>Responsive article cards using CSS Grid and progressive subgrid enhancement.</p>
+					<ul class="portfolio-tags">
+						<li>CSS Grid</li>
+						<li>Subgrid</li>
+						<li>@supports</li>
+					</ul>
+					<a class="portfolio-card__link" href="unit-4/grid-layouts/cards.html">View project</a>
+				</article>
+			</div>
+		</section>
+
+		<section class="portfolio-section">
+			<h2>All coursework</h2>
+			<ul class="portfolio-list">
+				<li><a href="unit-1/custom-properties/index.html">Unit 1: Custom Properties &amp; Nesting</a></li>
+				<li><a href="unit-2/index.html">Unit 2: Design Tokens &amp; Components</a></li>
+				<li><a href="unit-3/visual-effects/index.html">Unit 3: Visual Effects</a></li>
+				<li><a href="unit-4/grid-layouts/editorial.html">Unit 4: Editorial Grid Layout</a></li>
+				<li><a href="unit-4/grid-layouts/cards.html">Unit 4: Card Grid with Subgrid</a></li>
+				<li><a href="unit-4/advanced/container-demo.html">Unit 4: Container Queries</a></li>
+				<li><a href="unit-4/advanced/sticky-demo.html">Unit 4: Sticky Positioning</a></li>
+			</ul>
+		</section>
+
+		<section id="about" class="portfolio-section">
+			<h2>About</h2>
+			<p>
+				I am a BYU-Idaho student studying advanced CSS. My work focuses on accessible
+				interfaces, responsive layout, and reusable design systems built with modern CSS.
+			</p>
+		</section>
+	</main>
+
+	<footer class="portfolio-footer">
+		<p>Kameron Meeker &middot; WDD 331R</p>
+		<nav class="portfolio-footer__links" aria-label="Contact">
+			<a href="https://github.com/mee20004">GitHub</a>
+			<a href="mailto:kameronmeeker12@gmail.com">Email</a>
+		</nav>
+	</footer>
 </body>
 </html>

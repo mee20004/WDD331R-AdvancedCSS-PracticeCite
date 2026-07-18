@@ -6,27 +6,10 @@
 	line-height: 1.6;
 }
 
-.editorial-page header,
-.editorial-page footer {
+.editorial-page footer:not(.portfolio-footer) {
 	max-width: 1120px;
 	margin-inline: auto;
 	padding: var(--space-md) var(--space-lg);
-}
-
-.editorial-page header {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	gap: var(--space-sm);
-	border-bottom: 1px solid var(--color-border);
-	background: color-mix(in srgb, var(--color-surface) 88%, var(--color-accent) 12%);
-}
-
-.editorial-page header nav {
-	display: flex;
-	flex-wrap: wrap;
-	gap: var(--space-md);
 }
 
 .editorial-page .layout {
